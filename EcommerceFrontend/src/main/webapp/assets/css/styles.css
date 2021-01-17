@@ -21,3 +21,20 @@
 img{
     height: 600px;
 }
+h3{
+    
+    text-align: center;
+}
+
+.row{
+    padding: 56px;
+}
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    height: auto;
+    align-content: center;
+
+footer{
+    background-color: #04204e !important;
+    color: azure;
+}

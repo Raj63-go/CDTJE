@@ -36,3 +36,60 @@
           <span class="visually-hidden">Next</span>
         </a>
       </div>
+      
+       <H3>Products:</H3>
+
+      <div class="row">
+        <div class="col-md-3 mb-5">
+          <div class="card ">
+            <img class="card-img-top" src="${images}/sm1.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Watches</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3 mb-5">
+          <div class="card ">
+            <img class="card-img-top" src="${images}/sm-2.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Shoes</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3 mb-5">
+          <div class="card ">
+            <img class="card-img-top" src="${images}/sm-3.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Cameras</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-5">
+          <div class="card ">
+            <img class="card-img-top" src="${images}/sm-4.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Laptops</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->

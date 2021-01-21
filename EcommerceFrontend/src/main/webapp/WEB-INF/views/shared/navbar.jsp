@@ -15,10 +15,13 @@
                 <a class="nav-link " aria-current="page" href="${contextRoot}/about">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="./contact.html">Contact us</a>
+                <a class="nav-link " aria-current="page" href="${contextRoot}/product">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="./register.html">Register</a>
+                <a class="nav-link " aria-current="page" href="${contextRoot}/contact">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="${contextRoot}/register">Register</a>
               </li>
             </ul>
             

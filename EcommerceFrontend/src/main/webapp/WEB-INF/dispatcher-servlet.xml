@@ -15,6 +15,10 @@
   <context:component-scan base-package="com.niit.ecommercefrontend.controllers">
   </context:component-scan>
   
+  <context:component-scan base-package="com.niit.EcommerceBackend">
+  </context:component-scan>
+  
+  
   	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

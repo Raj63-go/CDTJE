@@ -37,7 +37,7 @@
         </a>
       </div>
       
-       <H3>Products:</H3>
+       
 
       <div class="row">
         <div class="col-md-3 mb-5">

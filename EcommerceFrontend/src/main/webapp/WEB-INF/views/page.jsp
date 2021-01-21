@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="${css}/bootstrap.min.css">
     <link rel="stylesheet" href="${css}/styles.css">
     
-    <title>Ecomerce-Webpage --${title}</title>
+    <title>Ecommerce-Webpage --${title}</title>
 </head>
 <body>
     <!--navbar-->
@@ -45,6 +45,12 @@
     <c:if test="${userClickRegister==true}">
     <%@include file="register.jsp" %>
     </c:if>
+    
+    <!-- product -->
+    <c:if test="${userClickProduct==true}">
+    <%@include file="product.jsp" %>
+    </c:if>
+    
     
 	
 	<!--footer-->

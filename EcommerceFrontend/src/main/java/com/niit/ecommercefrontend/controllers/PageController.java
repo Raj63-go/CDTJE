@@ -2,9 +2,11 @@ package com.niit.ecommercefrontend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.EcommerceBackend.model.Category;
 import com.niit.EcommerceBackend.dao.CategoryDAO;
 
 @Controller
@@ -60,7 +62,7 @@ public class PageController {
 		
 	}
 	
-	@RequestMapping("/product")
+	@RequestMapping("/show/all/product")
 	public ModelAndView products() {
 		
 		ModelAndView mav= new ModelAndView("page");
@@ -71,6 +73,24 @@ public class PageController {
 		
 		
 	}
+	
+	@RequestMapping("/show/category/{id}/product")
+	public ModelAndView showCategory(@PathVariable("id")int id) {
+		
+		Category category=null;
+		
+		category= categoryDAO.get(id);
+		
+		ModelAndView mav= new ModelAndView("page");
+		mav.addObject("title", "category");
+		mav.addObject("categories", categoryDAO.lists());
+		mav.addObject("categories",category);
+		mav.addObject("userCategoryProduct",true);
+		return mav;
+		
+		
+	}
+
 
 	
 }

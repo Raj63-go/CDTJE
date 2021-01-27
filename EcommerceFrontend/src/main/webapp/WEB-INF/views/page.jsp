@@ -47,7 +47,7 @@
     </c:if>
     
     <!-- product -->
-    <c:if test="${userClickProduct==true}">
+    <c:if test="${userClickProduct==true || userCategoryProduct==true}">
     <%@include file="product.jsp" %>
     </c:if>
     

@@ -15,7 +15,7 @@
                 <a class="nav-link " aria-current="page" href="${contextRoot}/about">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="${contextRoot}/product">Products</a>
+                <a class="nav-link " aria-current="page" href="${contextRoot}/show/all/product">Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="${contextRoot}/contact">Contact us</a>

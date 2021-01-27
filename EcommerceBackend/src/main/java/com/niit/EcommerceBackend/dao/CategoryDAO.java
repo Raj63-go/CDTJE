@@ -9,5 +9,7 @@ public interface CategoryDAO {
 	//method
 	
 	List<Category> lists();
+	
+	Category get(int id);
 
 }

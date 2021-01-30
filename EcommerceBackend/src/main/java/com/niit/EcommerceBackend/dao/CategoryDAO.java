@@ -11,5 +11,7 @@ public interface CategoryDAO {
 	List<Category> lists();
 	
 	Category get(int id);
+	
+	boolean add(Category category);
 
 }

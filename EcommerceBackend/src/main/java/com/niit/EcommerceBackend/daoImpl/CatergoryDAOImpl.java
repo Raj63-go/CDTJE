@@ -4,6 +4,8 @@ package com.niit.EcommerceBackend.daoImpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.EcommerceBackend.model.Category;
@@ -13,8 +15,8 @@ import com.niit.EcommerceBackend.dao.CategoryDAO;
 @Repository("categoryDAO")
 public class CatergoryDAOImpl implements CategoryDAO{
 	
-	
-	
+	@Autowired
+	private SessionFactory sessionFactory;
 	
 	
 	private static List<Category> categories= new ArrayList<>();
@@ -64,6 +66,22 @@ public class CatergoryDAOImpl implements CategoryDAO{
 		}
 		
 		return null;
+	}
+
+
+
+	@Override
+	public boolean add(Category category) {
+		try {
+			sessionFactory.getCurrentSession().persist(category);
+			return true;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return false;
+			
+		}
+		
 	}
 	
 	

@@ -2,7 +2,7 @@
  pageEncoding="ISO-8859-1"%>
  <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  
- <c:set var="contextRoot" value="${pageContext.request.contextPath }"/>
+ <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
  
  <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
  
@@ -18,7 +18,7 @@
     <!--css-->
     <link rel="stylesheet" href="${css}/bootstrap.min.css">
     <link rel="stylesheet" href="${css}/styles.css">
-    
+    <link rel="stylesheet" href="${css}/bootstrap.theme2.css">
     <title>Ecommerce-Webpage --${title}</title>
 </head>
 <body>

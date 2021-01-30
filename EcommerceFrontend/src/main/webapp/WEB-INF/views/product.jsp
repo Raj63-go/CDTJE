@@ -23,8 +23,8 @@
          <c:if test="${userCategoryProduct ==true}">
   		  <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="${contextRoot}/Home">Home</a></li>
-        <li class="breadcrumb-item active">Category</li>
-    	<li class="breadcrumb-item active" href="#">Category Products</li>
+        <li class="breadcrumb-item">Category</li>
+    	<li class="breadcrumb-item active"> <a href="#">${category.name}</a>
          </ol>
          </c:if>
   		

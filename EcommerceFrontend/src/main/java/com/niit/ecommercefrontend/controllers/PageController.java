@@ -74,7 +74,7 @@ public class PageController {
 		
 	}
 	
-	@RequestMapping("/show/category/{id}/product")
+	@RequestMapping("/show/category/{id}/products")
 	public ModelAndView showCategory(@PathVariable("id")int id) {
 		
 		Category category=null;
@@ -84,7 +84,7 @@ public class PageController {
 		ModelAndView mav= new ModelAndView("page");
 		mav.addObject("title", "category");
 		mav.addObject("categories", categoryDAO.lists());
-		mav.addObject("categories",category);
+		mav.addObject("category",category);
 		mav.addObject("userCategoryProduct",true);
 		return mav;
 		

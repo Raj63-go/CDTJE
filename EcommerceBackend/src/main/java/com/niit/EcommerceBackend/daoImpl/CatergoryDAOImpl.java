@@ -1,57 +1,33 @@
 package com.niit.EcommerceBackend.daoImpl;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.EcommerceBackend.model.Category;
 import com.niit.EcommerceBackend.dao.CategoryDAO;
+import com.niit.EcommerceBackend.model.Category;
 
 
 @Repository("categoryDAO")
+@Transactional
 public class CatergoryDAOImpl implements CategoryDAO{
 	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	
-	private static List<Category> categories= new ArrayList<>();
-	
-	static {
-	Category cat= new Category();
-	cat.setId(1);
-	cat.setName("Watches");
-	cat.setDescription("time is good");
-	cat.setImageURL("one.jpg");
-	categories.add(cat);
-	
-	cat=new Category();
-	cat.setId(2);
-	cat.setName("Cameras");
-	cat.setDescription("nice pic");
-	cat.setImageURL("two.jpg");
-	categories.add(cat);
-	
-	cat=new Category();
-	cat.setId(3);
-	cat.setName("Shoes");
-	cat.setDescription("good swag");
-	cat.setImageURL("third.jpg");
-	categories.add(cat);
-	
-	
-	}
-	
-	
-
 	@Override
 	public List<Category> lists() {
-		// TODO Auto-generated method stub
-		return categories;
+		String listCategory="FROM Category where active =:active";
+		Query query= sessionFactory.getCurrentSession().createQuery(listCategory);
+		query.setParameter("active", true);
+		
+		
+		return query.getResultList();
 	}
 
 
@@ -59,19 +35,16 @@ public class CatergoryDAOImpl implements CategoryDAO{
 	@Override
 	public Category get(int id) {
 		
-		for(Category category:categories) {
-			if(category.getId()==id){
-				return category;
-			}
-		}
 		
-		return null;
+		return sessionFactory.getCurrentSession().get(Category.class,Integer.valueOf(id));
 	}
 
 
 
 	@Override
 	public boolean add(Category category) {
+		
+		
 		try {
 			sessionFactory.getCurrentSession().persist(category);
 			return true;
@@ -82,6 +55,37 @@ public class CatergoryDAOImpl implements CategoryDAO{
 			
 		}
 		
+	}
+
+
+
+	@Override
+	public boolean update(Category category) {
+		try {
+			sessionFactory.getCurrentSession().update(category);
+			return true;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return false;
+			
+		}
+	}
+
+
+
+	@Override
+	public boolean delete(Category category) {
+		try {
+			category.setActive(false);
+			return this.update(category);
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			
+			
+		}
+		return false;
 	}
 	
 	

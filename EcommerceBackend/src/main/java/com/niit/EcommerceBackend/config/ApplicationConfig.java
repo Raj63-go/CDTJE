@@ -1,4 +1,4 @@
-package com.EcommerceBackend.config;
+package com.niit.EcommerceBackend.config;
 
 import java.util.Properties;
 
@@ -15,16 +15,16 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-@ComponentScan("com.niit.EcommerceBackend")
+@ComponentScan("com.niit.EcommerceBackend.model")
 @EnableTransactionManagement
 public class ApplicationConfig {
 	
 	
 	
-	public static final String DRIVER_NAME="oracle.jdbc.driver.OracleDriver";
-	public static final String DATABASE_URL="jdbc:oracle:thin:@localhost:1521:xe";
-	public static final String USERNAME="SHOPCART";
-	public static final String PASSWORD="password";
+	public static final String DRIVER_NAME="org.h2.Driver";
+	public static final String DATABASE_URL="jdbc:h2:tcp://localhost/~/test";
+	public static final String USERNAME="sa";
+	public static final String PASSWORD="sa";
 
 
 
@@ -45,7 +45,7 @@ public DataSource getDataSource() {
 public SessionFactory getSessionFactory(DataSource dataSource) {
 	LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 	builder.addProperties(getHibernateProperties());
-	builder.scanPackages("");
+	builder.scanPackages("com.niit.EcommerceBackend.model");
 	
 	return builder.buildSessionFactory();
 }
@@ -64,8 +64,7 @@ public HibernateTransactionManager getTransactionManager(SessionFactory sessionF
 	HibernateTransactionManager transactionManager= new HibernateTransactionManager(sessionFactory);
 	
 	return transactionManager;
-	
-}
+	}
 
 
 

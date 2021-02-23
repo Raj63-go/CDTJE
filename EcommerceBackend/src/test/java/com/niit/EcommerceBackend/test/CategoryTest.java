@@ -27,13 +27,13 @@ public class CategoryTest {
 		
 		
 	}
-	@Ignore
+	
 	@Test
 	public void testAddCategory() {
 		category =new Category();
-		//category.setId(1);
-		category.setName("Watches");
-		category.setDescription("time is good");
+		
+		category.setName("Tablets");
+		category.setDescription("see things in bigger view");
 		category.setImageURL("one.jpg");
 		
 		assertEquals("category added successfully",true,categoryDAO.add(category));

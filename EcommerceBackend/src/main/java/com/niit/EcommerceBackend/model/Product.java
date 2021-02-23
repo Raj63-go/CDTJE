@@ -34,10 +34,10 @@ public class Product {
 	private boolean active;
 	
 	@Column(name="category_id")
-	private int categoryid;
+	private int categoryId;
 	
 	@Column(name="supplier_id")
-	private int supplierid;
+	private int supplierId;
 	
 	private int purchases;
 	
@@ -111,20 +111,21 @@ public class Product {
 		this.active = active;
 	}
 
-	public int getCategoryid() {
-		return categoryid;
+
+	public int getCategoryId() {
+		return categoryId;
 	}
 
-	public void setCategoryid(int categoryid) {
-		this.categoryid = categoryid;
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
 	}
 
-	public int getSupplierid() {
-		return supplierid;
+	public int getSupplierId() {
+		return supplierId;
 	}
 
-	public void setSupplierid(int supplierid) {
-		this.supplierid = supplierid;
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
 	}
 
 	public int getPurchases() {
@@ -147,9 +148,11 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", description="
 				+ description + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", active=" + active
-				+ ", categoryid=" + categoryid + ", supplierid=" + supplierid + ", purchases=" + purchases + ", views="
+				+ ", categoryId=" + categoryId + ", supplierId=" + supplierId + ", purchases=" + purchases + ", views="
 				+ views + "]";
 	}
+
+	
 	
 	
 	

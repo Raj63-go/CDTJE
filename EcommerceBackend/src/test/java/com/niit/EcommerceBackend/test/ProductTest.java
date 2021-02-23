@@ -31,20 +31,20 @@ public class ProductTest {
 		productDAO =(ProductDAO) ct.getBean("productDAO");
 		
 	}
-	@Ignore
+	
 	@Test
 	public void testAddProduct() {
 		product = new Product();
 		
 		
-		product.setName("Apple Iphone");
-		product.setBrand("6s");
+		product.setName("Boat headphone");
+		product.setBrand("Boat");
 		product.setActive(true);
-		product.setQuantity(3);
-		product.setCategoryid(1);
-		product.setDescription("It's a nice brand new phone");
-		product.setUnitPrice("200000");
-		product.setSupplierid(2);
+		product.setQuantity(1);
+		product.setCategoryId(3);
+		product.setDescription("It's a brand new headphone");
+		product.setUnitPrice("2000");
+		product.setSupplierId(2);
 		
 		
 		
@@ -69,7 +69,7 @@ public class ProductTest {
 
 		
 	}
-	
+	@Ignore
 	@Test
 	public void testUpdateProduct() {
 		product= productDAO.get(2);
@@ -80,10 +80,10 @@ public class ProductTest {
 		product.setBrand("Acer");
 		product.setActive(true);
 		product.setQuantity(3);
-		product.setCategoryid(1);
+		
 		product.setDescription("It's a brand new laptop");
 		product.setUnitPrice("200000");
-		product.setSupplierid(3);
+		
 		
 		
 		assertEquals("product updated successfully",true,productDAO.update(product));

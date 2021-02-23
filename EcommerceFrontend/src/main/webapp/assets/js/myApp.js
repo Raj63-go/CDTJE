@@ -2,6 +2,7 @@ var $table =$('#productListTables');
 
 
 if($table.length)
+	
 	{
 	
 	var jsonUrl='';
@@ -60,7 +61,7 @@ if($table.length)
 				data:'id',
 				mRender:function(data,type,row){
 					var str ='';
-					str +='<a class="btn btn-primary" href ="'+window.contextRoot+' /show/'+data+'/products">View Product</a> &#160;';
+					str +='<a class="btn btn-primary" href ="'+window.contextRoot+'/show/'+data+'/products">View Product</a> &#160;';
 					
 					str += '<a class="btn btn-success" href="#">Add To Cart</a>';
 					

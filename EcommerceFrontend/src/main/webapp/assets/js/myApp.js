@@ -55,7 +55,12 @@ if($table.length)
 					
 			},
 			{
-				data:'quantity'
+				data:'quantity',
+				mRender:function(data, type, show){
+					if(data <1){
+						return '<span style="color:red">Out of stock</span>';
+					}
+				}
 			},
 			{
 				data:'id',

@@ -7,13 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.EcommerceBackend.dao.CategoryDAO;
+import com.niit.EcommerceBackend.dao.ProductDAO;
 import com.niit.EcommerceBackend.model.Category;
+import com.niit.EcommerceBackend.model.Product;
 
 @Controller
 public class PageController {
 	
 	@Autowired
 	CategoryDAO categoryDAO;
+	
+	@Autowired
+	ProductDAO productDAO;
 	
 	
 	
@@ -88,6 +93,25 @@ public class PageController {
 		mav.addObject("userCategoryProduct",true);
 		return mav;
 		
+		
+	}
+	
+	@RequestMapping("/show/{id}/products")
+	public ModelAndView showSingleProducts(@PathVariable("id")int id) {
+		
+		ModelAndView mav= new ModelAndView("page");
+		
+		Product product=productDAO.get(id);
+		product.setViews(product.getViews()+1);
+		
+		productDAO.update(product);
+		
+		mav.addObject("title",product.getName());
+		mav.addObject("product",product);
+		mav.addObject("userClickSingleProducts");
+		
+		
+		return mav;
 		
 	}
 

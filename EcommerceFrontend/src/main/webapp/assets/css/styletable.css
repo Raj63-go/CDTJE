@@ -1,0 +1,17 @@
+.col-xs-12{
+	background-color:#B6B6B4;
+	
+}
+ 
+.col-md-9{
+	background-color:#0C090A;
+}
+
+.dataTableImg
+{
+	width:100px;
+	height:100px;
+	display: flex;
+  justify-content: center;
+  object-fit: cover;
+}

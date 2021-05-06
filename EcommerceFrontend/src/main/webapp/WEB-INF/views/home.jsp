@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-        
+        <!--after carousel  -->
         <div class="col-md-3 mb-5">
           <div class="card ">
             <img class="card-img-top" src="${images}/sm-2.jpg" alt="">

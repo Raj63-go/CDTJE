@@ -29,6 +29,8 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></bean>
   
   <mvc:annotation-driven/>
   <mvc:resources location="/assets/" mapping="/resources/**"></mvc:resources>

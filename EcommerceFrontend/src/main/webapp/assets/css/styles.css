@@ -1,5 +1,5 @@
 .bg-dark {
-    background-color: #04204e !important;
+    background-color: black;
 }
 .navbar-brand{
     font-weight: bold;
@@ -26,32 +26,10 @@ h3{
     text-align: center;
 }
 
-.sidebar {
-    height: 50%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 16px;
-  }
-  
-  .sidebar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
+
   
   .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
+    margin-left: auto; /* Same as the width of the sidenav */
     padding: 0px 10px;
   }
   
@@ -67,12 +45,5 @@ h3{
     width: 100%;
     height: auto;
     align-content: center;
-
-footer{
-    background-color: #04204e !important;
-    position: fixed;
-    color: white;
-    left: 0;
-    bottom: 0;
-    width: 100%;
 }
+

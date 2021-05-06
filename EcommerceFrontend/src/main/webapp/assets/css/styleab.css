@@ -1,0 +1,13 @@
+/* about */
+.main{
+	margin: auto; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+.card{
+	margin-top:50px;
+}
+
+.help-block{
+	color:red;
+}

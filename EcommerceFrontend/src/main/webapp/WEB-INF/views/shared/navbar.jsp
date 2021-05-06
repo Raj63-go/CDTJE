@@ -1,32 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-        
-          <a class="navbar-brand" href="#">Shop-Cart</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="col-auto">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="${contextRoot}/home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="${contextRoot}/about">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="${contextRoot}/show/all/product">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="${contextRoot}/contact">Contact us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="${contextRoot}/register">Register</a>
-              </li>
-            </ul>
-            
-          
+<header class="main-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-dark main-nav px-0">
+        <a class="navbar-brand" href="">
+					      <img src="" alt="">
+					    </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar icon-bar-1"></span>
+                        <span class="icon-bar icon-bar-2"></span>
+                        <span class="icon-bar icon-bar-3"></span>
+                    </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ml-auto text-uppercase f1">
+            <li>
+              <a href="${contextRoot}/home" class="active active-first" id="home">Home</a>
+            </li>
+            <li id="about">
+              <a href="${contextRoot}/about">About us</a>
+            </li>
+            <li id="product">
+              <a href="${contextRoot}/show/all/product">Products</a>
+            </li>
+            <li id="manageproduct">
+              <a href="${contextRoot}/manage/products">Manage Products</a>
+            </li>
+            <li id="contact">
+              <a href="${contextRoot}/contact">Contact</a>
+            </li>
+            <li id="register">
+              <a href="${contextRoot}/register">Register</a>
+            </li>
+           
+          </ul>
         </div>
-       </div>
-     </div> 
       </nav>
+    </div>
+    <!-- /.container -->
+  </header>

@@ -1,11 +1,11 @@
-
+<div class="container">
 
 	<div class="row">
 
 		<div class="col-md-3">
-			<h1 class="my-4">Product Category</h1>
+			
 
-			<!--<h1 class="my-4">Shop Name</h1> -->
+			<!-- <h1 class="my-4">Shop Name</h1>  -->
 			<%@include file="./shared/sidebar.jsp"%>
 
 		</div>
@@ -26,7 +26,7 @@
 						</ol>
 					</c:if>
 
-					<c:if test="${userClickCategoryProduct ==true}">
+					<c:if test="${userCategoryProduct ==true}">
 
 						<script>
 							window.categoryId = '${category.id}';
@@ -60,16 +60,7 @@
 							</tr>
 						</thead>
 
-						<tfoot>
-							<tr>
-								<th></th>
-								<th>Name</th>
-								<th>Brand</th>
-								<th>Price</th>
-								<th>Quantity</th>
-								<th></th>
-							</tr>
-						</tfoot>
+						
 					</table>
 
 				</div>
@@ -77,4 +68,6 @@
 
 		</div>
 
+	</div>
+	
 	</div>

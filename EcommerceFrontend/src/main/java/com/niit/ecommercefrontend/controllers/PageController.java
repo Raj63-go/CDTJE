@@ -1,5 +1,7 @@
 package com.niit.ecommercefrontend.controllers;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,8 +29,9 @@ public class PageController {
 		
 		ModelAndView mav= new ModelAndView("page");
 		mav.addObject("title", "Home");
-		
+		mav.addObject("categories",categoryDAO.lists());
 		mav.addObject("userClickHome",true);
+		
 		return mav;
 		
 		
@@ -40,6 +43,18 @@ public class PageController {
 		ModelAndView mav= new ModelAndView("page");
 		mav.addObject("title", "About Us");
 		mav.addObject("userClickAbout",true);
+		return mav;
+		
+		
+	}
+	
+	@RequestMapping("/show/all/product")
+	public ModelAndView products() {
+		
+		ModelAndView mav= new ModelAndView("page");
+		mav.addObject("title", "Products");
+		mav.addObject("categories", categoryDAO.lists());
+		mav.addObject("userClickProduct",true);
 		return mav;
 		
 		
@@ -67,17 +82,7 @@ public class PageController {
 		
 	}
 	
-	@RequestMapping("/show/all/product")
-	public ModelAndView products() {
-		
-		ModelAndView mav= new ModelAndView("page");
-		mav.addObject("title", "Products");
-		mav.addObject("categories", categoryDAO.lists());
-		mav.addObject("userClickProduct",true);
-		return mav;
-		
-		
-	}
+	
 	
 	@RequestMapping("/show/category/{id}/products")
 	public ModelAndView showCategory(@PathVariable("id")int id) {
@@ -87,7 +92,7 @@ public class PageController {
 		category= categoryDAO.get(id);
 		
 		ModelAndView mav= new ModelAndView("page");
-		mav.addObject("title", "category");
+		mav.addObject("title",category.getName());
 		mav.addObject("categories", categoryDAO.lists());
 		mav.addObject("category",category);
 		mav.addObject("userCategoryProduct",true);
@@ -108,7 +113,7 @@ public class PageController {
 		
 		mav.addObject("title",product.getName());
 		mav.addObject("product",product);
-		mav.addObject("userClickSingleProducts");
+		mav.addObject("userClickSingleProducts",true);
 		
 		
 		return mav;

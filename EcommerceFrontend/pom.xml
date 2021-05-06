@@ -8,17 +8,17 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>EcommerceFrontend Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
-	<spring.version>5.2.12.RELEASE</spring.version>
-	<javaee.version>8.0</javaee.version>
-	
+		<spring.version>5.2.12.RELEASE</spring.version>
+		<javaee.version>8.0</javaee.version>
+
 	</properties>
-	
+
 	<dependencies>
 
 		<dependency>
-		<!-- backend link -->
+			<!-- backend link -->
 			<groupId>com.niit</groupId>
 			<artifactId>EcommerceBackend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -42,14 +42,29 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+			<exclusion>
+			<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+				
+			</exclusions>
+
+		</dependency>
+
+
 
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
-		
+
+
 
 	</dependencies>
 	<build>

@@ -1,6 +1,42 @@
-.dataTableImg
+/* .dataTableImg
 {
-	width:100px;
-	height:100px;
+	width:1000px;
+	height:1000px;
 	
+} */
+ .sidebar {
+    height: 50%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  } 
+  
+  footer{
+    background-color: #04204e !important;
+    position: fixed;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+  
+  .blue-text{
+	text-color:blue;
 }
